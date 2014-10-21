@@ -101,16 +101,17 @@ Create listener using netca.
 ```
 bash-4.1# su - oracle
 
-[oracle@localhost ~]$ netca -silent -responseFile $ORACLE_HOME/assistants/netca/netca.rsp
+[oracle@localhost ~]$ export DISPLAY=hostname:0.0
+[oracle@localhost ~]$ netca -silent -responseFile /vagrant/database/response/netca.rsp
 
 Parsing command line arguments:
     Parameter "silent" = true
-    Parameter "responsefile" = /opt/oracle/product/11.2.0/dbhome_1/assistants/netca/netca.rsp
+    Parameter "responsefile" = /vagrant/database/response/netca.rsp
 Done parsing command line arguments.
 Oracle Net Services Configuration:
 Profile configuration complete.
 Oracle Net Listener Startup:
-    Running Listener Control:
+    Running Listener Control: 
       /opt/oracle/product/11.2.0/dbhome_1/bin/lsnrctl start LISTENER
     Listener Control complete.
     Listener started successfully.
